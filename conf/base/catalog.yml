@@ -8,3 +8,11 @@ raw_data:
   filepath: data/01_raw/2.ANUPoll2019RoleOfGovernment_CSV_01445.csv
   layer: raw
 
+intermediate_data:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/intermediate.csv
+  layer: intermediate
+
+
+
+
