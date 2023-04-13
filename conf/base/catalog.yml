@@ -8,6 +8,14 @@ raw_data:
   filepath: data/01_raw/2.ANUPoll2019RoleOfGovernment_CSV_01445.csv
   layer: raw
 
+
+codebook:
+  type: pandas.ExcelDataSet
+  filepath: data/01_raw/1. ADA.CODEBOOK.01445.xlsx
+  layer: raw
+  load_args:
+    sheet_name: Data Dictionary
+
 intermediate_data:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/intermediate.csv
