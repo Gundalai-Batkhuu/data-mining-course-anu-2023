@@ -8,7 +8,6 @@ raw_data:
   filepath: data/01_raw/2.ANUPoll2019RoleOfGovernment_CSV_01445.csv
   layer: raw
 
-
 codebook:
   type: pandas.ExcelDataSet
   filepath: data/01_raw/1. ADA.CODEBOOK.01445.xlsx
@@ -20,7 +19,94 @@ intermediate_data:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/intermediate.csv
   layer: intermediate
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
 
+primary_data:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/primary.csv
+  layer: processed
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
 
+r_labels:
+  type: pandas.CSVDataSet
+  filepath: data/03_processed/r_labels.csv
+  layer: processed
+  save_args:
+    index: True
 
+s_labels:
+  type: pandas.CSVDataSet
+  filepath: data/03_processed/s_labels.csv
+  layer: processed
+  save_args:
+    index: True
+
+feature_data_r:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/feature_r.csv
+  layer: feature
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
+
+min_return:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/min_return.csv
+  layer: feature
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
+
+risk_aversion:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/risk_aversion.csv
+  layer: feature
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
+
+target_variable:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/target.csv
+  layer: feature
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
+
+gambling_variety:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/gambling_variety.csv
+  layer: feature
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
+
+other_features:
+    type: pandas.CSVDataSet
+    filepath: data/04_feature/other_features.csv
+    layer: feature
+    save_args:
+      index: True
+    load_args:
+      index_col: SRCID
+
+model_input:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/model_input.csv
+  layer: model_input
+  save_args:
+    index: True
+  load_args:
+    index_col: SRCID
 
